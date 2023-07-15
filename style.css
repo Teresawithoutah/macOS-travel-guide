@@ -1,0 +1,165 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+
+*{
+   font-family: 'Roboto', sans-serif;
+  font-weight: 300 !important;
+  letter-spacing: .8px;
+}
+
+.intro{
+  padding-top:50px;
+  margin-bottom: -45px;
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: normal !important;
+  
+}
+h4{
+  font-weight: 300 !important;
+}
+
+h2{font-size: 35px !important;}
+
+.finder-img{
+  width:10%;
+  margin-top: -40px;
+  margin-left: 30vw;
+
+}
+.headertitle{
+  width: 90%;
+}
+
+.subtitle{
+  padding-bottom:50px;
+  font-size:25px;
+
+}
+
+
+
+#map {
+  height: 100%;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+  
+}
+
+.map-container {
+    width: 50%;
+    height: 60vh;
+    text-align: right;
+    color: white;
+}
+
+.OS-banners {
+    width: 50%;
+    color: green;
+    height: 100vh;
+}
+
+
+.table-of-contents {
+      margin: 20px;
+    }
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 5px;
+}
+
+.table-of-contents a {
+  text-decoration: none;
+  color: black;
+}
+
+.table-of-contents a:hover {
+  text-decoration: underline;
+}
+
+
+
+.readmore{
+  border-radius: 45px;
+  background-color: white; 
+
+  margin-left:100px;
+  margin-right: 100px;
+  
+}
+
+@keyframes spin-me{ 
+   0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+.spinning-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+   /*animation-name*/
+  -webkit-animation-name: spin-me;
+  animation-name: spin-me;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /*animation-duration*/
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  /*animation-timing-function*/
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.spinning-intro{
+width: 100%;
+  height: 100%;
+ 
+}
+
+
+
+.readmore-text{
+  padding-left:50px;
+  padding-right:50px;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color:pink;
+  padding: 0;
+}
+
+
+
+table#mwEQ, table.box-Primary_sources.plainlinks.metadata.ambox.ambox-content.ambox-Primary_sources, div#mwA_g, section#mwAag, section#mwAaA{
+  display:none;
+}
