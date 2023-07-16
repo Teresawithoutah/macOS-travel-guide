@@ -1,4 +1,4 @@
-var map;
+let map;
 var Mavericks;
 var Yosemite;
 var ElCapitan;
@@ -14,7 +14,7 @@ var Sonoma;
 
 async function initMap() {
   // The location of map default
-  const california = { lat: 37.6216985, lng: -120.0471758 };
+  const california = { lat: 39.6216985, lng: -118.0471758 };
 
   // rest of the operating system inspiration locations
   Mavericks = { lat: 37.4921688, lng: -122.4949453 };
@@ -41,20 +41,6 @@ async function initMap() {
     mapId: "2752aeb2b88a2b4",
   });
   
-  Mavericks_Marker();
-  Yosemite_Marker();
-  ElCapitan_Marker();
-  Sierra_Marker();
-  HighSierra_Marker();
-  Mojave_Marker();
-  Catalina_Marker();
-  BigSur_Marker();
-  Monterey_Marker();
-  Ventura_Marker();
-  Sonoma_Marker();
-  
-
-}
 
 function Mavericks_Marker() {
 
@@ -308,6 +294,8 @@ function Sonoma_Marker(){
     infomarker11.open(map, marker11);
   });
 
+}
+  
 }
 initMap();
 

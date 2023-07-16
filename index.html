@@ -1,23 +1,365 @@
 <html>
   <head>
     <title>macOS Travel Guide</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-     <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.ico?v=1689135039802">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FONTS-->
+          <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Judson&Roboto:wght@800&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ICON --> 
+         <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.ico?v=1689135039802">
+ 
+  <!-- STYLESHEET--> 
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-       <!--Add a script by google -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4&callback=initMap" async defer></script>
-<script type="text/javascript" src="specialsauce.js"></script>
-<script type="text/javascript" src="wikisearch.js"></script>
-   
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="sliderstyle.css">
+    
+
+	  <link rel="stylesheet" href="style.css">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script type="text/javascript" src="specialsauce.js"></script>
+    <script type="text/javascript" src="navbar.js"></script>
+    
+    
+     
   </head>
   <body>
+   
+  <div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#locations">Locations</a>
+  <a href="#about">About</a>
+    <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/finder.png?v=1689136406851" style="width:100px; height: 100px; right:0; position:fixed; margin-top: -25px;"/>
+
+</div>
+  
+  
+    <!--The div element for the map -->
+<div class="main" id="home">
+       <div class ="OS-banners">
+                <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/finder.png?v=1689136406851" class="finder-icon"/>
+
+        <h1 class="main-herotitle">
+            macOS <br> Travel Guide
+            </h1>
+         <h4 class="main-herosubtitle">
+             Visit California one operating system at a time.  
+            </h4>
+      </div>
+
+  <!-- DISPLAYS MAP -->    
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+</div>
+    <!--END --> 
     
+        <div class="marquee">   
+      <div class="locations-pins">
+        <ul class="marker-icon">
+        <li>          
+           Mavericks Beach, CA         
+        </li>
+        <li>         
+            Yosemite National Park, CA          
+        </li>
+        <li>               
+            El Capitán, CA          
+        </li>
+        <li>        
+             Sierra Nevada, CA          
+        </li>
+        <li>
+            Mojave Desert, CA
+        </li>
+        <li>
+            Santa Catalina Island, CA
+        </li>
+        <li>
+            Big Sur, CA
+        </li>
+        <li>
+          Monterey Bay, CA
+        </li>
+        <li>
+            Ventura County, CA
+        </li>
+        <li>
+            Sonoma County, CA
+        </li> 
+        </ul>
+      </div>
+      
+    </div>
+      
+    <div class="locations-heros">
+     <center> <h3>
+        
+        Locations
+      </h3></center>
+      <div class="location-banner">
+      
+   
+        
+      </div>
+    </div>
+    
+    <div class="tester">
+      <section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mavericks.jpg?v=1689459270532');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4" style="font-size:50px !important;"> OS X Mavericks </h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/yosemite.webp?v=1689459345531');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">OS X Yosemite</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/elcapitan.jpg?v=1689459811755');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">OS X El Capitan</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sierra.jpg?v=1689459700258');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Sierra</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/highsierra.jpg?v=1689459696351');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS High Sierra</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mojave-night.jpg?v=1689459684196');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Mojave</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+               <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Catalina-Light-mode.jpg?v=1689459682153');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Catalina</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>  
+							</div>
+               <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg?v=1689460476765');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Big Sur</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Monterey-wallpaper-Light.jpg?v=1689459683011');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Monterey</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                     <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/ventura.webp?v=1689459685840');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Ventura</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                     <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.webp?v=1689459685232');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  style="font-size:50px !important;">macOS Sonoma</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+											<p class="h5 mb-4">Email Address: email@info.com</p>
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+      
+    </div>
+    
+    
+    
+    
+    
+    <!-- 
     <div class="intro">
       <div class="finder-img">
 
@@ -40,27 +382,7 @@
             </h4>
         </center>
          </div>
-  
-  
-  
-    <!--The div element for the map -->
-    <div class="main">
-      
-
-    <div class="map-container">
-      <div id="map"></div>
-      </div>
-  
-      <div class ="OS-banners">
-    
-        
-      </div>
-    
-    </div>
-    
-    
-    
-    
+    -->
       <div class="readmore">
         
                   <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/spinningwheelofdeath.png?v=1689138695423" class="spinning-img"/>
@@ -164,10 +486,19 @@
         </div>
       </div>
     
+ 
 
-    
-    <!-- prettier-ignore -->
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4&callback=initMap"></script>
+    <!-- prettier-ignore 
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4", v: "beta"});</script>
+-->
+       <script src="extrajs/jquery.min.js"></script>
+    <script src="extrajs/bootstrap.min.js"></script>
+   <script src="extrajs/owl.carousel.min.js"></script>
+    <script  src="extrajs/main.js"></script>
+        <!--<script src="wikisearch.js"></script> -->
+  <script src="tesfile.js"></script>
   </body>
 </html>

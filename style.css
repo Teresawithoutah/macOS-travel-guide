@@ -9,6 +9,50 @@
   letter-spacing: .8px;
 }
 
+
+#navbar {
+  background-color: white;
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index:5;
+  padding-left: 50px;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-family:'Judson', serif;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 100;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.main-herotitle {
+  color:white;
+  font-size: 140px;
+  font-weight: 800 !important;
+  font-family: 'Archivo', sans-serif;
+  line-height: 150px;
+}
+.main-herosubtitle{
+  color:white;
+  font-size: 33px;
+  font-weight: 800 !important;
+  font-family: 'Judson', serif;
+  margin-top: -35px;
+}
+
 .intro{
   padding-top:50px;
   margin-bottom: -45px;
@@ -21,6 +65,18 @@ h1{
   font-weight: normal !important;
   
 }
+
+h3{
+  color:white;
+  font-size: 50px;
+  font-weight: 800 !important;
+  font-family: 'Archivo', sans-serif;
+  line-height: 130px;
+  text-transform: normal;
+
+}
+
+
 h4{
   font-weight: 300 !important;
 }
@@ -47,28 +103,107 @@ h2{font-size: 35px !important;}
 
 #map {
   height: 100%;
+    margin-left:-1px;
+  margin-top: -1px;
 }
 
 
 .main {
     display: flex;
     flex-direction: row;
-    height: 700px;
+  height: 100%;
+
+
   
+}
+
+.finder-icon{
+  width: 200px; 
+  height: 200px; 
+  margin:0; 
+  top:0;
+  position: absolute;
+  left:0;
+  padding-left: 50px;
 }
 
 .map-container {
     width: 50%;
-    height: 60vh;
+     height:100%;
     text-align: right;
-    color: white;
+
+  
 }
 
 .OS-banners {
     width: 50%;
-    color: green;
-    height: 100vh;
+  height:100%;
+    padding-left:100px;
+    padding-right: 200px;
+    padding-top: 200px;
+    padding-bottom: 0px;
 }
+
+.marker-icon {
+  list-style-type: none;
+  display: flex;
+}
+
+.marker-icon li:before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-size: 25px;
+  background-image: url("https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/pin-4-128.png?v=1689453187737");
+  background-repeat: no-repeat;
+  margin-right: 5px;
+
+}
+
+.locations-pins p
+{
+  color:white;
+  font-size: 15px;
+}
+.locations-heros{
+  padding-left: 100px;
+}
+/* MARQUEE 
+
+*/
+
+.marquee {
+  height: 50px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee ul {
+
+  width: 200%;
+  height: 50px;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee li  {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+
+
 
 
 .table-of-contents {
@@ -101,6 +236,7 @@ h2{font-size: 35px !important;}
 
   margin-left:100px;
   margin-right: 100px;
+  margin-top: 250px;
   
 }
 
@@ -154,7 +290,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background-color:pink;
+  background-color:#ED6663;
   padding: 0;
 }
 
