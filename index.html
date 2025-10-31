@@ -1,23 +1,437 @@
 <html>
   <head>
     <title>macOS Travel Guide</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-     <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.ico?v=1689135039802">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--FONTS-->
+          <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Judson&Roboto:wght@800&display=swap" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ICON --> 
+         <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.ico?v=1689135039802">
+ 
+  <!-- STYLESHEET--> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/sliderstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-       <!--Add a script by google -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4&callback=initMap" async defer></script>
-<script type="text/javascript" src="specialsauce.js"></script>
-<script type="text/javascript" src="wikisearch.js"></script>
-   
+	  <link rel="stylesheet" href="css/style.css">
+    <!-- SCRIPTS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4&libraries=places&loading=async&callback=initMap"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
+        <script type="module" src="js/init_map.js"></script>
+    
+     
   </head>
   <body>
+   
+  <div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#locations">Locations</a>
+  <a href="#about">About</a>
+    <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/finder.png?v=1689136406851" style="    width: 70px;
+    height: 85px;
+    right: -4;
+    position: fixed;
+    margin-top: -12px;"/>
+
+</div>
+  
+      <div class="overlay">
+  
+    <!--The div element for the map -->
+<div class="main" id="home">
+
     
+ 
+         <script>
+        // Array of image URLs
+        const images = [
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.webp?v=1689459685232',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/ventura.webp?v=1689459685840',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/highsierra.jpg?v=1689459696351',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sierra.jpg?v=1689459700258',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/elcapitan.jpg?v=1689459811755',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg?v=1689460476765',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mojave-night.jpg?v=1689459684196',
+            'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Monterey-wallpaper-Light.jpg?v=1689459683011',
+          'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Catalina-Light-mode.jpg?v=1689459682153',
+          'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/yosemite.webp?v=1689459345531',
+          'https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mavericks.jpg?v=1689459270532',
+          
+        ];
+
+        // Select a random image
+        const OSImage = images[Math.floor(Math.random() * images.length)];
+
+        // Set the background image of the div
+        document.getElementById('home').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${OSImage})`;
+
+    </script>
+       
+
+  
+  
+       <div class ="OS-banners">
+        <div class="OS-banners-left" id="left">
+        
+            <h1 class="main-herotitle">
+                macOS   <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/finder.png?v=1689136406851" class="finder-icon"/> <br> Travel Guide
+            </h1>
+            <h4 class="main-herosubtitle">
+                 Visit California, one operating system at a time in one trip.  
+            </h4>
+         </div>
+         <div class="OS-banners-right">
+           
+           <div class="search-function">
+             <h4>
+               
+               Origin
+             </h4>
+            <div class="place-autocomplete-card" id="place-autocomplete-card">
+    </div>
+           
+             <button type="submit" class="button" onclick="initMap();"><i class="fa fa-search" style="font-size:25px"></i></button>
+             </div>
+        
+           
+    <!--  RESULT section - USE LATER      
+    <div id="results"></div>
+
+-->
+         </div>
+
+      </div>
+        </div>
+
+</div>
+    <!--END --> 
+    
+        <div class="marquee">   
+      <div class="locations-pins">
+        <ul class="marker-icon">
+          
+          
+        <li>          
+           Mavericks Beach, CA         
+        </li>
+        <li>         
+            Yosemite National Park, CA          
+        </li>
+        <li>               
+            El Capitán, CA          
+        </li>
+        <li>        
+             Sierra Nevada, CA          
+        </li>
+        <li>
+            Mojave Desert, CA
+        </li>
+        <li>
+            Santa Catalina Island, CA
+        </li>
+        <li>
+            Big Sur, CA
+        </li>
+        <li>
+          Monterey Bay, CA
+        </li>
+        <li>
+            Ventura County, CA
+        </li>
+        <li>
+            Sonoma County, CA
+        </li> 
+        </ul>
+      </div>
+      
+    </div>
+    
+   
+    
+  
+    <div id="map"></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="locations-heros">
+     <center> <h3>
+        
+        Locations
+      </h3></center>
+     
+    </div>
+
+    <div class="tester">
+      <section class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+              
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mavericks.jpg?v=1689459270532');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="desc w-100">
+											<h2 class="mb-4" > OS X Mavericks </h2>
+											<p class="h5">Mavericks Beach, CA</p>
+										
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Mavericks Beach is renowned for its colossal waves, making it a hotspot for professional surfers and thrill-seekers. This iconic surfing location embodies the spirit of challenge and adventure, much like Apple's innovative approach to technology. Apple's OS X Mavericks was named after this famous beach, symbolizing power, risk, and a break from the ordinary.
+                          </p>
+                        </div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/yosemite.webp?v=1689459345531');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4" >OS X Yosemite</h2>
+											<p class="h5">Yosemite National Park, CA</p>
+											
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>Yosemite National Park is a natural wonder known for its stunning granite cliffs, waterfalls, and diverse ecosystems. It represents the beauty and resilience of nature, paralleling Apple's commitment to environmental sustainability and design excellence. Apple's OS X Yosemite drew inspiration from this majestic park, highlighting its aim for seamless, powerful, and visually striking user experiences.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/elcapitan.jpg?v=1689459811755');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >OS X El Capitan</h2>
+											<p class="h5">El Capitán, CA</p>
+										
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>El Capitán is a towering granite monolith in Yosemite National Park, famous among climbers for its sheer vertical face. It stands as a symbol of endurance and strength, reflecting Apple's dedication to robust and reliable products. The OS X El Capitan release focused on performance and efficiency, mirroring the formidable nature of this iconic rock formation.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              
+							<div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sierra.jpg?v=1689459700258');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >macOS Sierra</h2>
+											<p class="h5">Sierra Nevada, CA</p>
+									
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+													<p>The Sierra Nevada mountain range is celebrated for its majestic peaks, alpine lakes, and rich biodiversity. This natural treasure aligns with Apple's pursuit of peak performance and high-quality standards. OS X Sierra was named to evoke the grandeur and expansive possibilities inherent in Apple's operating systems.</p>
+												</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/highsierra.jpg?v=1689459696351');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >macOS High Sierra</h2>
+											<p class="h5">High Sierra, CA</p>
+										
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>High Sierra is a region within the Sierra Nevada mountains, known for its rugged terrain, pristine lakes, and stunning vistas. It epitomizes the untouched beauty and the drive for excellence, paralleling Apple's attention to detail and innovation. macOS High Sierra focused on refinement and enhanced performance, much like the region's elevated natural splendor.</p>
+                        </div>
+                      </div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                
+                
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/mojave-night.jpg?v=1689459684196');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4" >macOS Mojave</h2>
+											<p class="h5">Mojave Desert, CA</p>
+									
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>The Mojave Desert is a vast and arid landscape known for its unique beauty and extreme conditions. It represents resilience and adaptability, qualities that Apple strives to incorporate into its products. macOS Mojave introduced features designed to enhance user experience in diverse environments, much like the desert's ability to thrive under harsh conditions.</p>	</div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                
+                
+               <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Catalina-Light-mode.jpg?v=1689459682153');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4" >macOS Catalina</h2>
+											<p class="h5">Santa Catalina Island, CA</p>
+						
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>Santa Catalina Island is a serene getaway with crystal-clear waters, diverse marine life, and lush landscapes. It symbolizes tranquility and a refreshing escape, akin to Apple's emphasis on user-friendly and aesthetically pleasing design. While there is no OS named after Catalina Island, the macOS Catalina reflects the island's spirit by offering a seamless and immersive digital experience.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>  
+							</div>
+               <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg?v=1689460476765');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4" >macOS Big Sur</h2>
+											<p class="h5">Big Sur, CA</p>
+										
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>Big Sur is famed for its dramatic coastline, redwood forests, and breathtaking views, offering a sense of freedom and inspiration. This location embodies the beauty of nature and creative exploration, mirroring Apple's innovative spirit. macOS Big Sur introduced a major redesign, emphasizing a more immersive and visually stunning user interface.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+              <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/macOS-Monterey-wallpaper-Light.jpg?v=1689459683011');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >Monterey Bay, CA</h2>
+											<p class="h5">Call: 0123 456 78901</p>
+										
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>Monterey Bay is renowned for its rich marine ecosystem, the historic Cannery Row, and the renowned Monterey Bay Aquarium. It represents a blend of natural beauty and scientific discovery, paralleling Apple's dedication to research and innovation. macOS Monterey focused on enhancing connectivity and productivity, much like the bay's role in connecting diverse marine life and human communities.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                     <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/ventura.webp?v=1689459685840');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >macOS Ventura</h2>
+											<p class="h5">Ventura County, CA</p>
+											
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>Ventura County boasts beautiful coastlines, agricultural richness, and a laid-back lifestyle. It reflects a balance of productivity and leisure, similar to Apple's goal of integrating work and play through its products. While not directly named in an OS, the ethos of Ventura aligns with Apple's vision of versatile and user-friendly technology.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+                     <div class="item">
+								<div class="work-wrap d-md-flex">
+									<div class="img order-md-last" style="background-image: url('https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/sonoma.webp?v=1689459685232');"></div>
+									<div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
+										<div class="py-md-5">
+											<h2 class="mb-4"  >macOS Sonoma</h2>
+											<p class="h5">Sonoma County, CA</p>
+											
+											<div class="row justify-content-end">
+												<div class="col-xl-8">
+                          <p>Sonoma County is celebrated for its world-class wineries, scenic vineyards, and vibrant arts scene. It symbolizes quality, creativity, and the pursuit of excellence, aligning with Apple's high standards and innovative culture. Although there isn't a macOS named after Sonoma, the county's essence of sophistication and craftsmanship resonates with Apple's brand values.</p></div>
+											</div>
+											<p>
+												<button type="button" class="btn btn-outline-dark mb-2 py-3 px-4">Shop the collection Outline</button>
+												<button type="button" class="btn btn-dark mb-2 py-3 px-4">Learn More</button>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        </div>
+        		</section>
+			</div>
+
+    
+    
+    
+    
+    
+    <!-- 
     <div class="intro">
       <div class="finder-img">
 
@@ -40,27 +454,7 @@
             </h4>
         </center>
          </div>
-  
-  
-  
-    <!--The div element for the map -->
-    <div class="main">
-      
-
-    <div class="map-container">
-      <div id="map"></div>
-      </div>
-  
-      <div class ="OS-banners">
-    
-        
-      </div>
-    
-    </div>
-    
-    
-    
-    
+    -->
       <div class="readmore">
         
                   <img src="https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/spinningwheelofdeath.png?v=1689138695423" class="spinning-img"/>
@@ -164,10 +558,17 @@
         </div>
       </div>
     
-
+ 
+  
     
-    <!-- prettier-ignore -->
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyDssl7Bzp1r1rPi1F9OblfYuUnjSCmueE4", v: "beta"});</script>
+    
+  
+       
+           
+       <script src="extrajs/jquery.min.js"></script>
+    <script src="extrajs/bootstrap.min.js"></script>
+   <script src="extrajs/owl.carousel.min.js"></script>
+    <script  src="extrajs/main.js"></script>
+    <script src="js/wikisearch.js"></script> 
   </body>
 </html>

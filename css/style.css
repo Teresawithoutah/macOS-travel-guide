@@ -1,0 +1,435 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+#place-autocomplete-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 10px;
+  padding: 5px;
+  font-family: Roboto, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  width:80%;
+}
+
+gmp-place-autocomplete {
+ width: 100%;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+*{
+   font-family: 'Roboto', sans-serif;
+  font-weight: 300 !important;
+  letter-spacing: .8px;
+}
+
+
+#navbar {
+  background-color: white;
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index:5;
+  padding-left: 50px;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  font-family:'Archivo', serif;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+#navbar a:hover {
+  background-color: blue;
+  color: black;
+}
+
+.main-herotitle {
+  color:white;
+  font-size: 100px;
+  font-weight: 800 !important;
+  font-family: 'Archivo', sans-serif;
+  margin:0;
+  padding: 0;
+  border-bottom: 0px;
+}
+.main-herosubtitle{
+  color:white;
+  font-size: 20px;
+  font-weight: 300 !important;
+  font-family: 'Roboto', serif !important;
+  padding-top: 35px;
+
+}
+
+.intro{
+  padding-top:50px;
+  margin-bottom: -45px;
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: normal !important;
+  
+}
+
+h3{
+  color:white;
+  font-size: 50px;
+  font-weight: 800 !important;
+  font-family: 'Archivo', sans-serif;
+  line-height: 130px;
+  text-transform: normal;
+
+}
+
+
+h4{
+  font-weight: 300 !important;
+}
+
+h2{font-size: 35px !important;}
+
+.finder-img{
+  width:10%;
+  margin-top: -40px;
+  margin-left: 30vw;
+
+}
+.headertitle{
+  width: 90%;
+}
+
+.subtitle{
+  padding-bottom:50px;
+  font-size:25px;
+
+}
+
+
+
+#map {
+  height: 70%;
+    margin-left:-1px;
+  margin-top: -1px;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+     background-size: cover;  
+padding: 100px 100px 150px 100px;
+
+
+  
+
+
+  
+}
+   
+
+.finder-icon{
+  width: 100px; 
+  height: 100px; 
+ margin: 0;
+}
+
+.map-container {
+    width: 50%;
+     height:100%;
+    text-align: right;
+
+  
+}
+
+
+
+.OS-banners {
+    width: 100%;
+  height:110%;
+   
+  
+  display: flex;
+
+}
+
+.OS-banners-left{
+  flex: 1;
+}
+.OS-banners-right{
+  flex: 1;
+  align-self: center;
+  
+}
+
+.search-function {
+  background-color: white;
+  /*padding: 10px 0px 10px 15px;*/
+  border-radius: 25px;
+  display: flex;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+
+#search-bar {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  outline: none; /* Remove outline on focus */
+}
+
+.search-function button {
+  padding: 10px 55px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+
+}
+
+.search-function h4 {
+      font-size: 15px;
+    /* margin-bottom: 10px; */
+    padding: 15px 10px 15px 15px;
+    margin-bottom: -1px;
+      text-align: center;
+    align-self: center;
+    border-right: 1px solid lightgray;
+  width: 10%;
+  
+}
+
+
+
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.marker-icon {
+  list-style-type: none;
+  display: flex;
+}
+
+.marker-icon li:before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-size: 25px;
+  background-image: url("https://cdn.glitch.global/6ba238ab-3db9-4ad3-80c2-5e420bc0c5c0/pin-4-128.png?v=1689453187737");
+  background-repeat: no-repeat;
+  margin-right: 5px;
+
+}
+
+.locations-pins p
+{
+  color:white;
+  font-size: 15px;
+}
+.locations-heros{
+  padding-left: 100px;
+}
+
+
+.locations-heros h3{
+  font-size: 50px ;
+  color: white;
+  font-family: 'Archivo';
+  font-weight: 100 !important;
+  
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  border: 1px solid white;
+}
+
+.owl-carousel .owl-nav .owl-prev p span, .owl-carousel .owl-nav .owl-prev p small, .owl-carousel .owl-nav .owl-next p span, .owl-carousel .owl-nav .owl-next p small{
+  color: white;
+}
+/* MARQUEE 
+
+*/
+
+.marquee {
+
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  padding: 0px 0px 10px 0px;
+  overflow: hidden;
+  position: relative;
+  background-color: #5d9afc;
+}
+
+.marquee ul {
+
+  width: 200%;
+  height: 50px;
+  align-items: center;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee li  {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+
+
+
+
+.table-of-contents {
+      margin: 20px;
+    }
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 5px;
+}
+
+.table-of-contents a {
+  text-decoration: none;
+  color: black;
+}
+
+.table-of-contents a:hover {
+  text-decoration: underline;
+}
+
+
+
+.readmore{
+  border-radius: 45px;
+  background-color: white; 
+
+  margin-left:100px;
+  margin-right: 100px;
+  margin-top: 250px;
+  
+}
+
+@keyframes spin-me{ 
+   0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+
+.spinning-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+   /*animation-name*/
+  -webkit-animation-name: spin-me;
+  animation-name: spin-me;
+  /*animation-iteration-count*/
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /*animation-duration*/
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  /*animation-timing-function*/
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.spinning-intro{
+width: 100%;
+  height: 100%;
+ 
+}
+
+
+
+.readmore-text{
+  padding-left:50px;
+  padding-right:50px;
+}
+
+
+
+.col-xl-8 {
+    text-align: left;
+}
+
+.col-xl-8 p{
+  color: black;
+  font-family: 'Noto Sans';
+  font-size: 15px;
+}
+
+.work-wrap .text{
+  background-color: white;
+}
+.work-wrap .text h2{
+  color: black;
+  font-family: 'Archivo';
+  font-size: 50px;
+  font-weight: 100 !important;
+}
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color:#ED6663;
+  padding: 0;
+}
+
+
+
+table#mwEQ, table.box-Primary_sources.plainlinks.metadata.ambox.ambox-content.ambox-Primary_sources, div#mwA_g, section#mwAag, section#mwAaA{
+  display:none;
+}
